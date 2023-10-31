@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Web OS</title>
+	<link rel="shortcut icon" href="./IMAGES/logo.png" type="image/x-icon">
+
+	<meta charset="utf-8">
+
+	<!-- <!==STYLESHEET==============================> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<!-- <!==STYLESHEET==============================> -->
+
+
+
+	<!-- <!==JS==============================> -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="tbartime.js"></script>
+	<!-- <!==JS==============================> -->
+	<style media="screen">
+		.popup {
+			background-color: rgb(255, 255, 255);
+			/* For browsers that do not support gradients */
+			background-image: linear-gradient(to right, rgba(255, 166, 0, 0.747), white, rgba(4, 241, 4, 0.692));
+			;
+			width: 420px;
+			padding: 30px 40px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+			border-radius: 8px;
+			font-family: "Poppins", sans-serif;
+			display: none;
+			text-align: center;
+			box-shadow: #000000 2px 2px 2px 2px;
+		}
+
+		.popup button {
+			display: block;
+			margin: 0 0 20px auto;
+			background-color: transparent;
+			font-size: 30px;
+			color: #000000;
+			background: transparent;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+
+		.popup h3 {
+			margin-top: -20px;
+		}
+
+		.popup p {
+			font-size: 14px;
+			text-align: justify;
+			margin: 20px 0;
+			line-height: 25px;
+		}
+
+		.a {
+			display: block;
+			width: 150px;
+			position: relative;
+			margin: 10px auto;
+			text-align: center;
+			background-color: #3399ff;
+			border-radius: 20px;
+			color: #ffffff;
+			text-decoration: none;
+			padding: 8px 0;
+		}
+
+		.b {
+			display: block;
+			width: 150px;
+			position: relative;
+			margin: 10px auto;
+			text-align: center;
+			background-color: #3399ff;
+			border-radius: 20px;
+			color: #ffffff;
+			text-decoration: none;
+			padding: 8px 0;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="popup">
+		<button id="close">&times;</button>
+		<h3><b>Welcome To Web OS</b></h3>
+		<h6>Made In India</h6>
+		<p>
+			Get ready to experience our fast, secure and cache-free lightweight OS. Press <b>F11</b> for enjoying the
+			full screen display. We are running upon
+			donations, support us to manage our domain and hosting costs.<span> <strong
+					style="background-color: rgba(255, 0, 0, 0.616); color: #ffffff;"> Caught Bug? Report
+					it.</strong></span>
+		</p>
+		<div class="a">
+			<a href="https://redhulk.in/support-os/" style="color: white;">Donate</a>
+		</div>
+		<div class="b">
+			<a href="mailto:officialredhulk.gmail.com" style="color: white;">Report Bugs</a>
+		</div>
+	</div>
+
+	<!-- DESKTOP ICONS -->
+	<div class="Icons_holder">
+
+
+		<div class="Icons_holder">
+
+			<button onclick="OCBROWSER()" id="browserbtn" class="Iconshell" data-toggle="tooltip"
+				data-placement="bottom" title="Browser">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Browser.png"></img></center>
+			</button>
+
+			<button onclick="OCCALC()" id="browserbtn" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Calculator">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Calculator.png"></img></center>
+			</button>
+
+			<button onclick="OCCE()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Code Editor">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Code_Editor.png"></img></center>
+			</button>
+
+			<button onclick="OChtml()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="HTML Editor">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/html.png"></img></center>
+			</button>
+
+			<button onclick="OCGAME()" class="Iconshell" data-toggle="tooltip" data-placement="bottom" title="3D Chess">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/chess.png"></img></center>
+			</button>
+
+			<button onclick="OCVideoCall()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Video Call">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/videocall.png"></img></center>
+			</button>
+
+			<button onclick="OCMUSIC()" class="Iconshell" data-toggle="tooltip" data-placement="bottom" title="Excel">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/excel.png"></img></center>
+			</button>
+
+			<button onclick="OCNOTEPAD()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Notepad">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Notepad.png"></img></center>
+			</button>
+
+			<button onclick="OCpaint()" class="Iconshell" data-toggle="tooltip" data-placement="bottom" title="Paint">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/paint.png"></img></center>
+			</button>
+
+			<button onclick="OCimageeditor()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Image Editor">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/photopea.png"></img></center>
+			</button>
+
+			<button onclick="OCtodo()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Todo List">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/todo.png"></img></center>
+			</button>
+
+			<button onclick="OCTER()" class="Iconshell" data-toggle="tooltip" data-placement="bottom" title="Terminal">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Terminal.png"></img></center>
+			</button>
+
+			<button onclick="OCvanishchat()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Vanish Chat">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/greeenchat.png"></img></center>
+			</button>
+
+			<button onclick="OCstickynotes()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Stickynotes">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/notes.png"></img></center>
+			</button>
+
+			<button onclick="OCsupport()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Support">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/support.png"></img></center>
+			</button>
+
+		</div>
+
+
+
+	</div>
+	<!-- DESKTOP ICONS -->
+
+
+
+
+	<a class="weatherwidget-io" href="https://forecast7.com/en/20d5978d96/india/" data-label_1="INDIA"
+		data-label_2="WEATHER" data-theme="original">INDIA WEATHER</a>
+	<script>
+		!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+	</script>
+
+
+
+
+	<!--BROWSER OF WebOS-->
+	<div id="browser" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Microsoft Bing</button>
+			</div>
+		</div>
+		<iframe src="https://www.bing.com/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--BROWSER OF WebOS-->
+
+	<!--CALCULATOR OF WebOS-->
+	<div id="calcu" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Calculator</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/scientific-calculator/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--CALCULATOR OF WebOS-->
+
+	<!--CODEEDITOR OF WebOS-->
+	<div id="codeeditor" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Code Editor</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/codecanvas" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--CODEEDITOR OF WebOS-->
+
+	<!--HTML Canvas OF WebOS-->
+	<div id="htmlwin" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>HTML Editor</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/htmlcanvas/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--HTML Canvas OF WebOS-->
+
+	<!--GAME OF WebOS-->
+	<div id="game" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>3D Chess</button>
+			</div>
+		</div>
+		<iframe src="https://3dchessapp.netlify.app/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--GAME OF WebOS-->
+
+	<!--VideoCall OF WebOS-->
+	<div id="VideoCall" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Video Call</button>
+			</div>
+		</div>
+		<iframe src="https://devdebate.netlify.app/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--Video Call OF WebOS-->
+
+	<!--MUSIC OF WebOS-->
+	<div id="music" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Excel</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/excel" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--MUSIC OF WebOS-->
+
+	<!--NOTEPAD OF WebOS-->
+	<div id="notepad" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Notepad</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/notepad/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--NOTEPAD OF WebOS-->
+
+	<!--paint OF WebOS-->
+	<div id="paint" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Paint</button>
+			</div>
+		</div>
+		<iframe src="https://jspaint.app/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--paint OF WebOS-->
+
+	<!--imageeditor OF WebOS-->
+	<div id="imageeditor" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Photo Editor</button>
+			</div>
+		</div>
+		<iframe src="https://www.photopea.com/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--imageeditor OF WebOS-->
+
+	<!--todo OF WebOS-->
+	<div id="todo" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Todo List</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/todo/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--todo OF WebOS-->
+
+	<!--TERMINAL OF WebOS-->
+	<div id="ter" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Terminal</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/terminal" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--TERMINALS OF WebOS-->
+
+	<!--vanishchat OF WebOS-->
+	<div id="vanishchat" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Vanish Chat</button>
+			</div>
+		</div>
+		<iframe src="https://vanishchat.netlify.app/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--vanishchat OF WebOS-->
+
+	<!--stickynotes OF WebOS-->
+	<div id="stickynotes" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>stickynotes</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/stickynotes" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--stickynotes OF WebOS-->
+
+	<!--support OF WebOS-->
+	<div id="support" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Support</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/support-os/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--support OF WebOS-->
+
+
+    <audio id="myAudio" src="booting sound.mp3"></audio>
+
+	<script>
+        // Function to play the audio once when the page loads
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        // Attach the playAudio function to the window's load event
+        window.addEventListener("load", playAudio);
+    </script>
+
+
+	<script>
+		$(function () {
+			$('.resizable').draggable();
+			$('.resizable').resizable({
+				handles: "n,s,w,e"
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		window.addEventListener("load", function () {
+			setTimeout(
+				function open(event) {
+					document.querySelector(".popup").style.display = "block";
+				},
+				2000
+			)
+		});
+
+
+		document.querySelector("#close").addEventListener("click", function () {
+			document.querySelector(".popup").style.display = "none";
+		});
+	</script>
+</body>
+
+<div class="col-6">
+	<div class="Watermark">
+		<img style="padding-right: 10px;" src="./IMAGES/boot.png" alt="" width="50" height="30"
+			class="d-inline-block align-text-top">
+		<p style="text-align: center; padding-right: 10px;"><strong><span style="color: rgb(255, 255, 255);">Web</span></strong><span
+				style="color: rgb(255, 255, 255);"> OS</span></p>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="WebOS_Taskbar">
+		<script>
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth() + 1;
+			var year = date.getFullYear();
+			document.write(" " + day + "/" + month + "/" + year);  
+		</script>
+		<div style=" padding-left: 10px; padding-right: 10px; margin: 0px; display: block; align-content: center; justify-content: end;"
+			id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+		<p>|</p> &nbsp
+		<a href="index"><img style="padding-right: 10px;" src="Icons/Shutdown.png" alt="" width="30" height="20"
+				class="d-inline-block align-text-top" data-toggle="tooltip" data-placement="top" title="Shutdown"></a>
+		<p>|</p> &nbsp
+		<p>&copy; a <a href="https://redhulk.in"><span style="color: red;">red</span><span
+					style="color:rgb(7, 255, 7)">hulk</span><span style="color: white;">.in</span></a> product</p>
+
+	</div>
+</div>
+
+<!-- JAVASCRIPT FOR BROWSER -->
+<script>
+
+	function OCBROWSER() {
+		var BROWSER = document.getElementById("browser");
+
+		if (BROWSER.style.display === "none") {
+			BROWSER.style.display = "block"
+		}
+
+		else {
+			BROWSER.style.display = "none"
+		}
+	}
+</script>
+<!-- JAVASCRIPT FOR BROWSER -->
+
+<!-- JAVASCRIPT FOR CALCULATOR -->
+<script>
+
+	function OCCALC() {
+		var CE = document.getElementById("calcu");
+
+		if (CE.style.display === "none") {
+			CE.style.display = "block"
+		}
+
+		else {
+			CE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR CALCULATOR -->
+
+<!-- JAVASCRIPT FOR CODE EDITOR -->
+<script>
+
+	function OCCE() {
+		var CE = document.getElementById("codeeditor");
+
+		if (CE.style.display === "none") {
+			CE.style.display = "block"
+		}
+
+		else {
+			CE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR CODE EDITOR -->
+
+
+<!-- JAVASCRIPT FOR html -->
+<script>
+
+	function OChtml() {
+		var EX = document.getElementById("htmlwin");
+
+		if (EX.style.display === "none") {
+			EX.style.display = "block"
+		}
+
+		else {
+			EX.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR html -->
+
+<!-- JAVASCRIPT FOR GAME -->
+<script>
+
+	function OCGAME() {
+		var GE = document.getElementById("game");
+
+		if (GE.style.display === "none") {
+			GE.style.display = "block"
+		}
+
+		else {
+			GE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR GAME -->
+
+<!-- JAVASCRIPT FOR VideoCall -->
+<script>
+
+	function OCVideoCall() {
+		var GFG = document.getElementById("VideoCall");
+
+		if (GFG.style.display === "none") {
+			GFG.style.display = "block"
+		}
+
+		else {
+			GFG.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR VideoCall -->
+
+<!-- JAVASCRIPT FOR MUSIC -->
+<script>
+
+	function OCMUSIC() {
+		var MUS = document.getElementById("music");
+
+		if (MUS.style.display === "none") {
+			MUS.style.display = "block"
+		}
+
+		else {
+			MUS.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR MUSIC -->
+
+<!-- JAVASCRIPT FOR NOTEPAD -->
+<script>
+
+	function OCNOTEPAD() {
+		var NP = document.getElementById("notepad");
+
+		if (NP.style.display === "none") {
+			NP.style.display = "block"
+		}
+
+		else {
+			NP.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR NOTEPAD -->
+
+<!-- JAVASCRIPT FOR NOTEPAD -->
+<script>
+
+	function OCpaint() {
+		var PP = document.getElementById("paint");
+
+		if (PP.style.display === "none") {
+			PP.style.display = "block"
+		}
+
+		else {
+			PP.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR NOTEPAD -->
+
+<!-- JAVASCRIPT FOR imageeditor -->
+<script>
+
+	function OCimageeditor() {
+		var PE = document.getElementById("imageeditor");
+
+		if (PE.style.display === "none") {
+			PE.style.display = "block"
+		}
+
+		else {
+			PE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR imageeditor -->
+
+<!-- JAVASCRIPT FOR todo -->
+<script>
+
+	function OCtodo() {
+		var PTT = document.getElementById("todo");
+
+		if (PTT.style.display === "none") {
+			PTT.style.display = "block"
+		}
+
+		else {
+			PTT.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR todo -->
+
+<!-- JAVASCRIPT FOR TERMINAL -->
+<script>
+
+	function OCTER() {
+		var TR = document.getElementById("ter");
+
+		if (TR.style.display === "none") {
+			TR.style.display = "block"
+		}
+
+		else {
+			TR.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR TERMINAL -->
+
+<!-- JAVASCRIPT FOR vanishchat -->
+<script>
+
+	function OCvanishchat() {
+		var WKP = document.getElementById("vanishchat");
+
+		if (WKP.style.display === "none") {
+			WKP.style.display = "block"
+		}
+
+		else {
+			WKP.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR vanishchat -->
+
+<!-- JAVASCRIPT FOR stickynotes -->
+<script>
+
+	function OCstickynotes() {
+		var WA = document.getElementById("stickynotes");
+
+		if (WA.style.display === "none") {
+			WA.style.display = "block"
+		}
+
+		else {
+			WA.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR stickynotes -->
+
+<!-- JAVASCRIPT FOR support -->
+<script>
+
+	function OCsupport() {
+		var WD = document.getElementById("support");
+
+		if (WD.style.display === "none") {
+			WD.style.display = "block"
+		}
+
+		else {
+			WD.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR support -->
+
+
+<!-- -------------------------------------------------------------------- -->
+
+
+
+<!-- JAVASCRIPT FOR TIME \/ -->
+<script>
+
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
+	function showTime() {
+		var date = new Date();
+		var h = date.getHours(); // 0 - 23
+		var m = date.getMinutes(); // 0 - 59
+		var s = date.getSeconds(); // 0 - 59
+		var session = "AM";
+
+		if (h == 0) {
+			h = 12;
+		}
+
+		if (h > 12) {
+			h = h - 12;
+			session = "PM";
+		}
+
+		h = (h < 10) ? "0" + h : h;
+		m = (m < 10) ? "0" + m : m;
+		s = (s < 10) ? "0" + s : s;
+
+		var time = h + ":" + m + ":" + s + " " + session;
+		document.getElementById("MyClockDisplay").innerText = time;
+		document.getElementById("MyClockDisplay").textContent = time;
+
+		setTimeout(showTime, 1000);
+
+	}
+
+	showTime();
+
+	// Array of wallpaper URLs
+	const wallpapers = ['bari.jpg', 'Bird.jpg', 'Bird2.jpg', 'ai.jpg', 'bird3.jpg', 'car.jpg', 'car2.jpg', 'car3.jpg', 'car4.jpg', 'car5.jpg', 'car6.jpg', 'bridge.jpg', 'bridge2.jpg', 'burger.jpg', 'cake.jpg', 'cake2.jpg', 'candy.jpg', 'candy3.jpg', 'candy4.jpg', 'candy5.jpg', 'candy6.jpg', 'candy7.jpg', 'candy8.jpg', 'candy9.jpg', 'candy9.jpg', 'candy10.jpg', 'cat.jpg', 'cat2.jpg', 'chess.jpg', 'chess2.jpg', 'chess3.jpg', 'couple.jpg', 'durga.jpg', 'durga2.jpg', 'lion.jpg', 'lion2.jpg', 'lion3.jpg', 'lion4.jpg', 'lion5.jpg', 'lion6.jpg', 'fool.jpg', 'fool2.jpg', 'fairy.jpg', 'food.jpg', 'football.jpg', 'ganesha.jpg', 'Lego.jpg', 'good.jpg', 'hi.jpg', 'wallpaper.jpg', 'wallpaper2.jpg', 'wallpaper3.jpg', 'wallpaper4.jpg', 'wallpaper5.jpg', 'wallpaper6.jpg', 'wallpaper7.jpg', 'wallpaper8.jpg', 'wallpaper9.jpg', 'wallpaper10.jpg', 'wallpaper11.jpg', 'very.jpg', 'warrior.jpg', 'warrior2.jpg', 'warrior3.jpg', 'robot.jpg', 'robot2.jpg', 'robot3.jpg', 'monk.jpg', 'monk2.jpg', 'love.jpg', 'nice.jpg', 'Santa2.jpg', 'santa.jpg', 'shiva.jpg', 'swangs.jpg', 'tajmahal.jpg', 'valorant.jpg', 'shiva,jpg', 'Athena.jpg', 'bridge.jpg'];
+
+	// Function to change the background with a smooth transition
+	function changeBackgroundRandomlyWithTransition() {
+		// Get a random index within the range of the wallpapers array
+		const randomIndex = Math.floor(Math.random() * wallpapers.length);
+
+		// Get the URL of the randomly selected wallpaper
+		const randomWallpaper = wallpapers[randomIndex];
+
+		// Create a new div for transitioning
+		const transitionDiv = document.createElement('div');
+		transitionDiv.classList.add('transition-div');
+		transitionDiv.style.backgroundImage = `url(${randomWallpaper})`;
+
+		// Append the transition div to the body
+		document.body.appendChild(transitionDiv);
+
+		// Wait for a moment for the transition div to be added to the DOM
+		// Then, remove it to reveal the new background with a smooth fade effect
+		setTimeout(() => {
+			document.body.style.backgroundImage = `url(${randomWallpaper})`;
+			transitionDiv.remove();
+		}, 1000); // Adjust the transition duration (in milliseconds) as needed
+	}
+
+	// Call the function to change the background initially
+	changeBackgroundRandomlyWithTransition();
+
+	// Optionally, you can set an interval to change the background at regular intervals
+	// For example, change it every 10 seconds (10000 milliseconds)
+	setInterval(changeBackgroundRandomlyWithTransition, 100000000);
+
+
+</script>
+
+<script>
+	// Function to block the right-click context menu
+	function blockContextMenu(event) {
+		event.preventDefault();
+	}
+
+	// Attach the blockContextMenu function to the contextmenu event
+	window.addEventListener("contextmenu", blockContextMenu);
+</script>
+
+</html>
